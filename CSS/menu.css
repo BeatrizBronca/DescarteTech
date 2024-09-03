@@ -1,0 +1,595 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajuste para o container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo do conteúdo de texto (incluindo título e parágrafo) */
+.text-content {
+    flex: 1; /* Permite que o conteúdo de texto ocupe o espaço disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #394b35;
+    margin-bottom: 20px;
+    font-family: "Fraunces", serif;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    font-family: "Nobile", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+li{
+    font-family: "Nobile", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    font-family: "Fraunces", serif;
+}
+/* Navbar */
+.navbar {
+    background-color: #DFEEE2; /* Cor de fundo da navbar que combina com o tema */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; /* Aumentar a altura para acomodar a logo */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 30px; /* Adiciona margem superior para mover a logo para baixo */
+}
+
+.logo img {
+    height: 100px; /* Define o tamanho da logo */
+    margin-right: -8px; /* Espaçamento entre a logo e o texto */
+}
+
+.logo a {
+    color: #ffffff; /* Cor do texto do logo */
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -20px;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #00bf63;
+}
+
+.logo span {
+    color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: black; /* Cor dos links na navbar */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Efeito hover nos links */
+}
+
+/* Estilos das categorias */
+.categories, .impact-categories {
+    display: flex;
+    flex-direction: column; /* Empilha as categorias verticalmente */
+    gap: 20px;
+    flex: 1; /* Ocupa o espaço disponível no layout flex */
+}
+
+.impact-categories img{
+    float: right;
+    width: 50px;
+    margin-top: -16%;
+}
+
+.category {
+    background-color: #e9f3ec;
+    padding: 20px;
+    border-radius: 8px;
+    height: 5%;
+}
+
+.componente {
+    max-width: 260px;
+    max-height: 260px;
+    width: auto;
+    height: auto;
+}
+
+.impact-category {
+    background-color: #e9f3ec;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.category h2, .impact-category h2 {
+    font-size: 1.5em;
+    color: #394b35;
+}
+
+.category p, .impact-category p {
+    font-size: 1em;
+    color: #394b35;
+}
+
+/* Lista de itens */
+.impact-category ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #394b35;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .categories, .impact-categories {
+        flex-direction: row; /* Organiza as categorias lado a lado em telas maiores */
+        justify-content: space-between;
+    }
+}
+
+/* Estilo para a seção de estatísticas */
+.stats-section {
+    background-image: url("/esta.png"); /* Caminho da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.stats-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo preto semitransparente */
+    z-index: 0;
+}
+
+.stats-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stats-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.stats-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: white;
+    font-family: "Nobile", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.stats-table {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.stats-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Nobile", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.stats-table th, .stats-table td {
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: left;
+    color: white;
+   
+}
+
+.stats-table th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.consequences-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f7f8f7;
+    margin-top: 40px;
+}
+
+.consequences-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.consequences-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.consequences-text {
+    max-width: 800px;
+    text-align: center;
+}
+
+.consequences-text h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5em;
+    color: #394b35;
+    margin-bottom: 20px;
+}
+
+.consequences-text p {
+    font-family: 'Nobile', sans-serif;
+    font-size: 1.2em;
+    color: #405449;
+    margin-bottom: 20px;
+}
+
+.consequences-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.consequence-item {
+    background-color: #e9f3ec;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.consequence-item h2 {
+    font-size: 1.5em;
+    color: #394b35;
+    margin-bottom: 10px;
+}
+
+.consequence-item .number {
+    background-color: #d9e4da;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.consequence-item p {
+    font-size: 1em;
+    color: #405449;
+}
+
+@media (min-width: 768px) {
+    .consequences-content {
+        flex-direction: row;
+    }
+
+    .consequences-image {
+        max-width: 50%;
+        margin-right: 20px;
+    }
+
+    .consequences-text {
+        max-width: 50%;
+        text-align: left;
+    }
+}
+
+/* Estilos para a nova seção de descarte de eletrônicos */
+.disposal-method {
+    background-color: #e9f3ec;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.disposal-method h2 {
+    font-size: 1.5em;
+    color: #394b35;
+}
+
+.disposal-method p {
+    font-size: 1em;
+    color: #405449;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .disposal-method {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Estilo para a seção de reutilização e doação */
+.reutilizacao-doacao-section {
+    background-color: #f3f7f3;
+    padding: 60px 20px;
+}
+
+.reutilizacao-doacao-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.reutilizacao-doacao-text {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.reutilizacao-doacao-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #394b35;
+    margin-bottom: 20px;
+    font-family: "Fraunces", serif;
+}
+
+.reutilizacao-doacao-text p {
+    font-size: 1.2em;
+    color: #405449;
+    margin-bottom: 20px;
+    font-family: "Nobile", sans-serif;
+}
+
+.reutilizacao-doacao-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+
+
+.reutilizacao-doacao-item h2 {
+    font-size: 1.5em;
+    color: #394b35;
+    margin-bottom: 5px;
+    font-family: "Fraunces", serif;
+}
+
+.reutilizacao-doacao-item p {
+    font-size: 1em;
+    color: #405449;;
+    font-family: "Nobile", sans-serif;
+}
+
+.reutilizacao-doacao-image {
+    flex: 1;
+    max-width: 600px;
+}
+
+.reutilizacao-doacao-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .reutilizacao-doacao-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .reutilizacao-doacao-text {
+        margin-right: 0;
+    }
+}
+
+
+
+.processos-reciclagem-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.processos-reciclagem-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Fraunces", serif;
+}
+
+.processos-reciclagem-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    font-family: "Nobile", sans-serif;
+    color: #405449;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.timeline-number {
+    background-color: #ffffff;
+    color: #3d6245;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 10px;
+    font-family: "Fraunces", serif;
+}
+
+.timeline-content {
+    text-align: left;
+    max-width: 300px;
+}
+
+.timeline-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-family: "Fraunces", serif;
+    color: #394b35;
+}
+
+.timeline-content p {
+    font-size: 1em;
+    margin-bottom: 5px;
+    font-family: "Nobile", sans-serif;
+    color: #405449;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .timeline-content {
+        text-align: center;
+    }
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+/* Estilizando a caixa de conteúdo */
+.content-box {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0px #4A644E;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Estilizando o título */
+.content-box h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #394b35;
+}
+
+/* Estilizando o texto */
+.content-box p {
+    font-size: 1em;
+    color: #405449;
+    margin-top: 10px;
+    line-height: 1.5em;
+}
+
+
+@media (max-width: 768px) {
+    .content-box {
+        width: 95%; /* Ajusta a largura em telas menores */
+        padding: 20px; /* Reduz o padding para se adaptar melhor */
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        width: 100%; /* Ajusta a largura para preencher a tela em dispositivos muito pequenos */
+        padding: 0.5px; /* Reduz ainda mais o padding */
+    }
+}
+
+
+.footer {
+    background-color: #00bf63;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.footer .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .social-icons svg {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-icons a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.footer  p{
+    color: #405449;
+    margin-bottom: 0;
+}
+.footer .social-icons a:hover {
+    color: #d4d4d4;
+}
