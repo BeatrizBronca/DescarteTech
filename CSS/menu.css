@@ -163,7 +163,7 @@ h2{
 
 /* Estilo para a seção de estatísticas */
 .stats-section {
-    background-image: url("/esta.png"); /* Caminho da imagem de fundo */
+    background-image: url("/imagens/esta.png"); /* Caminho da imagem de fundo */
     background-size: cover;
     background-position: center;
     padding: 60px 20px;
