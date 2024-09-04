@@ -1,0 +1,143 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ajuste para o body e para garantir que a página ocupe a altura total */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f7f8f7;
+}
+
+/* Flexbox para garantir que o rodapé esteja no final da página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #DFEEE2; /* Cor de fundo da navbar que combina com o tema */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; /* Aumentar a altura para acomodar a logo */
+    font-family: "Fraunces", serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 30px; /* Adiciona margem superior para mover a logo para baixo */
+}
+
+.logo img {
+    height: 100px; /* Define o tamanho da logo */
+    margin-right: -8px; /* Espaçamento entre a logo e o texto */
+}
+
+.logo a {
+    color: #ffffff; /* Cor do texto do logo */
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -20px;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #00bf63;
+}
+
+.logo span {
+    color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: black; /* Cor dos links na navbar */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Efeito hover nos links */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1 0 auto;
+    margin-top: 5%;
+}
+
+/* Estilo do conteúdo de texto (incluindo título e parágrafo) */
+.text-content {
+    flex: 1; /* Permite que o conteúdo de texto ocupe o espaço disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #394b35;
+    margin-bottom: 20px;
+    font-family: "Fraunces", serif;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    font-family: "Nobile", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilo para o rodapé */
+.footer {
+    background-color: #00bf63;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .social-icons svg {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer p {
+    color: #405449;
+    margin-bottom: 0;
+}
+
+.footer .social-icons a:hover {
+    color: #d4d4d4;
+}
