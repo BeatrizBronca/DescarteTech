@@ -515,20 +515,22 @@ h2{
     }
 }
 
+
 .container2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 60vh; /* Responsivo com base na altura da viewport */
+    padding: 10px; /* Adiciona espaçamento em dispositivos pequenos */
 }
 
 /* Estilizando a caixa de conteúdo */
 .content-box {
     background-color: #fff;
-    padding: 50px;
+    padding: 3vw; /* Usa viewport width para ajuste responsivo */
     border-radius: 12px;
     box-shadow: 5px 5px 0px #4A644E;
-    max-width: 600px;
+    max-width: 90%; /* Usa porcentagem para largura responsiva */
     text-align: center;
 }
 
@@ -541,24 +543,34 @@ h2{
 
 /* Estilizando o texto */
 .content-box p {
-    font-size: 1em;
+    font-size: 1.2em; /* Aumenta um pouco o tamanho da fonte para melhor legibilidade */
     color: #405449;
     margin-top: 10px;
     line-height: 1.5em;
 }
 
-
+/* Media query para telas menores */
 @media (max-width: 768px) {
     .content-box {
-        width: 95%; /* Ajusta a largura em telas menores */
-        padding: 20px; /* Reduz o padding para se adaptar melhor */
+        padding: 5vw; /* Ajusta o padding para telas menores */
+    }
+    .content-box h1 {
+        font-size: 1.8em; /* Ajusta o tamanho da fonte */
+    }
+    .content-box p {
+        font-size: 1em;
     }
 }
 
 @media (max-width: 480px) {
     .content-box {
-        width: 100%; /* Ajusta a largura para preencher a tela em dispositivos muito pequenos */
-        padding: 0.5px; /* Reduz ainda mais o padding */
+        padding: 2vw; /* Ajusta ainda mais o padding para telas muito pequenas */
+    }
+    .content-box h1 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+    .content-box p {
+        font-size: 0.9em; /* Reduz o tamanho do texto para caber melhor em telas pequenas */
     }
 }
 
